@@ -1,0 +1,6 @@
+# annymaldonado.com
+
+User-agent: *
+Allow: /
+
+Sitemap: https://annymaldonado.com/sitemap.xml
