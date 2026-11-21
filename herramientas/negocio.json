@@ -68,6 +68,7 @@
       "name": "Anny Maldonado",
       "alternateName": "Ana Yolina Maldonado Cacpata",
       "jobTitle": "Psicóloga clínica",
+      "knowsAbout": ["Terapia de esquemas"],
       "url": "https://annymaldonado.com/",
       "image": "https://annymaldonado.com/img/anny-maldonado.jpg",
       "worksFor": { "@id": "https://annymaldonado.com/#anny" },
