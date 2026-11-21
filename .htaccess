@@ -1,11 +1,36 @@
 # annymaldonado.com
+#
+# OJO: el sitio se sirve desde GitHub Pages, que IGNORA este fichero. Nada de
+# lo que hay aquí (redirecciones, caché, cabeceras) se aplica hoy. Se mantiene
+# correcto por si el sitio vuelve a un hosting con Apache. Las redirecciones
+# que sí funcionan en Pages son las páginas con meta refresh de cada ruta vieja
+# (por ejemplo /amistad/index.html → /blog/amistad/).
 
 ErrorDocument 404 /404.html
 
 # ---------- Redirecciones ----------
 # Duplicados unificados el 2026-08-22: el mismo artículo estaba publicado dos veces.
-Redirect 301 /amar-es-crecer-2/ /amar-es-crecer/
-Redirect 301 /no-tienes-nada-que-perder-2/ /no-tienes-nada-que-perder/
+Redirect 301 /amar-es-crecer-2/ /blog/amar-es-crecer/
+Redirect 301 /no-tienes-nada-que-perder-2/ /blog/no-tienes-nada-que-perder/
+
+# Los artículos vivían en la raíz (/amistad/) y pasaron a /blog/amistad/.
+Redirect 301 /amar-es-crecer/ /blog/amar-es-crecer/
+Redirect 301 /amistad/ /blog/amistad/
+Redirect 301 /caminando-por-la-vida-sin-lampara/ /blog/caminando-por-la-vida-sin-lampara/
+Redirect 301 /cuando-la-dependencia-llega-a-su-fin/ /blog/cuando-la-dependencia-llega-a-su-fin/
+Redirect 301 /cuerpo-sano-en-mente-sana/ /blog/cuerpo-sano-en-mente-sana/
+Redirect 301 /cumbre-del-coto-un-sueno/ /blog/cumbre-del-coto-un-sueno/
+Redirect 301 /en-mi-llevo-parte-de-ti/ /blog/en-mi-llevo-parte-de-ti/
+Redirect 301 /la-cordada-femenina-de-la-aenh/ /blog/la-cordada-femenina-de-la-aenh/
+Redirect 301 /la-mejor-pasarela-para-una-mujer-el-camino-hacia-la-cumbre/ /blog/la-mejor-pasarela-para-una-mujer-el-camino-hacia-la-cumbre/
+Redirect 301 /la-montana-en-la-cotidianidad/ /blog/la-montana-en-la-cotidianidad/
+Redirect 301 /los-shanes-en-un-dia-de-aventura/ /blog/los-shanes-en-un-dia-de-aventura/
+Redirect 301 /no-tienes-nada-que-perder/ /blog/no-tienes-nada-que-perder/
+Redirect 301 /otro-dia-sin-ti/ /blog/otro-dia-sin-ti/
+Redirect 301 /pensar-o-sentir/ /blog/pensar-o-sentir/
+Redirect 301 /salto-de-fe/ /blog/salto-de-fe/
+Redirect 301 /si-lo-lograras-ya-no-tendrias-de-que-quejarte/ /blog/si-lo-lograras-ya-no-tendrias-de-que-quejarte/
+Redirect 301 /subiendo-a-la-cumbre/ /blog/subiendo-a-la-cumbre/
 
 # Los archivos de WordPress (categoría, etiqueta, autor, tipo) listaban las mismas
 # entradas cuatro veces. Se sustituyeron por un único blog agrupado por temas.
