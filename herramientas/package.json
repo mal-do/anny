@@ -1,0 +1,14 @@
+{
+  "name": "annymaldonado-herramientas",
+  "private": true,
+  "description": "Herramientas del sitio. Solo las necesita valida-schema.mjs; las demás corren con Node sin instalar nada.",
+  "scripts": {
+    "sitemap": "node sitemap.mjs",
+    "negocio": "node negocio.mjs",
+    "valida-schema": "node valida-schema.mjs"
+  },
+  "devDependencies": {
+    "schema-dts": "2.1.0",
+    "typescript": "7.0.2"
+  }
+}
