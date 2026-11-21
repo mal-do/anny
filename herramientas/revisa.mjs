@@ -11,6 +11,7 @@
  *   - que ningún title ni description se repite en otra página;
  *   - que el contenido principal está en el HTML (un <main> con <h1> y texto),
  *     es decir, que se lee sin ejecutar JavaScript;
+ *   - que ninguna página (salvo 404.html) tenga noindex;
  *   - que todos los bloques JSON-LD son JSON válido;
  *   - que cada FAQPage dice lo mismo que las preguntas visibles.
  *
@@ -48,7 +49,12 @@ for (const f of paginas(raiz)) {
   const mal = (m) => fallos.push(`${rel}: ${m}`);
   const head = (html.match(/<head>([\s\S]*?)<\/head>/) || [])[1] || '';
   const body = html.slice(html.indexOf('</head>'));
-  if (/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(head)) continue;
+  if (/<meta\s+name="robots"\s+content="[^"]*noindex/i.test(head)) {
+    // Solo la 404 vive fuera de una carpeta; cualquier otra página con noindex
+    // suele ser un artículo hecho con la plantilla al que se le olvidó cambiarlo.
+    mal('tiene noindex: no aparecerá en buscadores (¿falta cambiarlo tras usar la plantilla?)');
+    continue;
+  }
   revisadas++;
 
   if (!/<html lang="es-EC"/.test(html)) mal('falta lang="es-EC" en <html>');
