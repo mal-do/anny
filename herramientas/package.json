@@ -5,6 +5,7 @@
   "scripts": {
     "sitemap": "node sitemap.mjs",
     "negocio": "node negocio.mjs",
+    "revisa": "node revisa.mjs",
     "valida-schema": "node valida-schema.mjs"
   },
   "devDependencies": {
