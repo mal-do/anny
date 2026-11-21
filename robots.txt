@@ -1,6 +1,42 @@
 # annymaldonado.com
+#
+# Todo el sitio está abierto. Los grupos con nombre no cambian eso: dejan
+# por escrito que los buscadores y los asistentes de IA pueden leerlo.
+#
+# Cómo funciona: cada rastreador usa SOLO el grupo que lleva su nombre y, si
+# no hay ninguno, el de "*". Por eso cada grupo repite "Allow: /". Si algún
+# día se bloquea algo, hay que añadirlo en todos los grupos, no solo en "*".
 
+# Todos los demás
 User-agent: *
+Allow: /
+
+# Búsqueda en ChatGPT (aparecer y ser citado en las respuestas)
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT cuando alguien le pide abrir o consultar una página
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI, entrenamiento de modelos
+User-agent: GPTBot
+Allow: /
+
+# Google: uso del contenido en Gemini y en sus modelos (no afecta al buscador)
+User-agent: Google-Extended
+Allow: /
+
+# Bing (y Copilot, que usa su índice)
+User-agent: Bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
 Allow: /
 
 Sitemap: https://annymaldonado.com/sitemap.xml
